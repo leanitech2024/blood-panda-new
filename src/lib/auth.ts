@@ -117,7 +117,7 @@ export const auth = betterAuth({
     preserveSessionInDatabase: true,
     cookieCache: {
       maxAge: 60 * 60 * 24, // 1 day
-      enabled: true,
+      enabled: process.env.NODE_ENV === 'production',
       // refreshCache: {
       //   updateAge: 60, // Refresh when 60 seconds remain before expiry
       // },
